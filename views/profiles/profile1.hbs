@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<hhtml>
+    <head>
+        <title>Profile1</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="../../pstyle.css">
+        <script src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    </head>
+    <body>
+	<a id="button" style="text-decoration: none;"></a>
+        <div class="col-lg-12 col-md-12 col-sm-12 container justify-content-center">
+            <br>
+            <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: rgb(32, 78, 134);">
+                <div class="container-fluid">
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">  
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarSupportedContent" style="padding: 0.5%;">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                      <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="../../index">Home</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link active" href="baseprofile">All Profiles</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="../Services/animations/animations">Animations</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="../Services/bgm/bgm">BGM</a>
+                      </li>
+                      <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">More</a>
+                        <div class="dropdown-menu" style="background-color: rgb(94, 177, 255);opacity: 0.8;">
+                          <a class="dropdown-item" href="../Services/processing/processing" style=" color:#000;text-decoration: none;">Photo Editing</a>
+                          <a class="dropdown-item" href="../Services/infographics/infographics" style=" color:#000;">Inforgraphics</a>
+                          <a class="dropdown-item" href="/account" style=" color:#000;">Account</a>
+                          <a class="dropdown-item" href="../aboutus" style=" color:#000;">About Us</a>
+                        </div>
+                      </li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                      <li><a href="../../login" style="color:#bbb;text-decoration: none;">Login / Sign-Up</a></li>
+                    </ul>
+                  </div>
+                </div>  
+              </nav>
+         <div class="cfx">
+             <br>
+          </div>
+          {{#each row}}
+        <div class="row">
+            <div class="col-sm-12 col-lg-6">
+            <h1 style="text-align: left; font-size: 80px;">{{this.name}}</h1>
+            </div>
+            <div class="col-sm-12 col-lg-6" style="padding: 2%;">
+            <button type="button" id="seeprofile">Rate</button>
+            <button type="button" id="hirebtn">Hire</button>
+            </div>
+            <div class="col-sm-12 col-lg-6" style="padding: 1%;">
+
+                <img src="{{this.photo}}" style="border-radius: 4%;">
+            </div>     
+            <div class="col-sm-12 col-lg-6" style="background-color: rgba(22,22,44,0.5); border-radius: 3%;">
+              <div class="cfx"><br></div>
+              <h3 style="color: rgb(174, 223, 155); text-align: left; margin: 2%;">Ratings : &nbsp<span id="rater">50</span>%</h3>  
+              <br>
+              <h3 style="color: #ccc; text-align: left; margin: 2%;">{{this.expertof}}</h3>
+              <br>
+              <h3 style="color: #ccc; text-align: left; margin: 2%;">Experience : {{this.experience}}</h3>
+              <br>
+              <h3 style="color: rgb(174, 223, 155); text-align: left; margin: 2%;">Details:</h3>
+
+              <h4 style="color: #ccc; text-align: left; margin: 2%;">{{this.details}}</h4>
+              <br>
+              <div class="cfx">
+                <br><br>
+             </div>
+            </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-12 col-lg-4">
+          <h1 style="color : rgb(174, 223, 155); text-align: left;">Charges : </h1>
+          <h2 style="color : #eee; text-align: left;"> 1,080 INR and above</h2>
+          <br>
+          <h1 style="color : rgb(174, 223, 155); text-align: left;">Time Frame : </h1>
+          <h2 style="color : #eee; text-align: left;"> 3 Days</h2>
+          <br>
+          <h1 style="color : rgb(174, 223, 155); text-align: left;">Revisions : </h1>
+          <h2 style="color : #eee; text-align: left;"> Unlimited</h2>
+          </div>
+          <div class="col-sm-12 col-lg-8">
+           <div class="slider">
+                <div class="slides">
+                  <input type="radio" name="radio-btn" id="radio1">
+                  <input type="radio" name="radio-btn" id="radio2">
+                  <input type="radio" name="radio-btn" id="radio3">
+                  <div class="slide first">
+                    <img src="{{this.work1}}">
+                  </div>
+                  <div class="slide">
+                    <video autoplay muted loop width="100%" height="100%"><source src = "{{this.work2}}" type="video/mp4"></video>
+                  </div>
+                  <div class="slide">
+                    <video autoplay muted loop width="100%" height="100%"><source src = "{{this.work3}}" type="video/mp4"></video>
+                 
+                  </div>
+                  <div class="navigation-auto">
+                    <div class="auto-btn1"></div>
+                    <div class="auto-btn2"></div>
+                    <div class="auto-btn3"></div>
+                  </div>
+                </div>
+                <div class="navigation-manual">
+                  <label for="radio1" class="manual-btn"></label>
+                  <label for="radio2" class="manual-btn"></label>
+                  <label for="radio3" class="manual-btn"></label>
+                </div>
+              </div>
+            </div>
+        </div>
+    <div class="cfx">
+        <br>
+    </div>
+      <div class="row" style="padding: 1%; background: none;">
+        <div class="col-sm-12 col-lg-4 justify-content-center" style="margin: auto;">
+          <button type="button" id="bth">Rate Person</button>
+        </div>
+        <div id="myModal" class="modal">
+          <div class="modal-content" id="modc">
+          <span class="close">&times;</span>
+            <h2>Rate {{this.name}} for Graphics Design and infographics</h2>
+            <div class="rangeslider">
+              <input type="range" min="1" max="100" value="10"
+                             class="myslider" id="sliderRange">
+                             <h3><span id="demo"></span>%</h3>
+            </div>
+          </div>
+        
+        </div>
+        
+        <div class="col-sm-12 col-lg-4 justify-content-center" style="margin: auto;">
+          <button type="button" id="hp">Hire Person</button>
+        </div>
+                <div id="hireModal" class="modal">
+          <div class="modal-content" id="modh" style="background-color: rgba(227, 227, 233, 0.74);">
+          <span class="close2">&times;</span>
+          <h2 style="font-size: 40px; color: #000;">Hire {{this.name}}</h2>
+          <div class="cfx"> 
+            <br><br>
+        </div>
+        <form class="box" action="/auth/order1" method="post" style="background-color: rgb(23, 52, 71); padding: 2%; border-radius: 10px; color:#ccc;">
+          <h3 style="text-align: left;">Select maximum length of work</h3>
+            <div class="rangeslider2">
+              <input type="range" name="sliderrange2" min="1" max="10" value="2"
+                             class="myslider" id="sliderRange2">
+                             <h3><span id="minutes">2 Minutes</span></h3>
+            </div>
+            <h2 name="cname" style="display: none;">{{this.name}}</h2>
+            <div class="cfx">
+          </div>
+          <h3 style="text-align: right;">Total Amount : <span id="charger">1110</span> INR</h3>
+          <div class="cfx"> 
+            <br>
+        </div>
+          <h3 style="text-align: left;">Enter Details of the work</h3>
+            <input type="text" name="details" placeholder="Enter Details">
+            <div class="cfx">
+              <br>
+          </div>
+            <h3 style="text-align: left;">Enter a Link For Auxilliary Files</h3>
+              <input type="text" name="link" placeholder="Enter Link for OneDrive, Dropbox etc.">
+              <input type="submit" name="" value="Proceed">
+
+              <div class="cfx"> 
+                <br>
+            </div>
+          </form>
+        </div>
+        </div>
+        {{/each}}
+        <div class="col-sm-12 col-lg-4 justify-content-center" style="margin: auto;">
+          <a href="../index"><button type="button" id="bth">Back To Home</button></a>
+        </div>
+      </div>
+                <div class="cfx"> 
+                    <br>
+                </div>
+            <footer>
+                <div class="social">
+                    <a href="https://www.facebook.com/" target="_blank"><i class = "fab fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/harshit.s.r/" target="_blank"><i class = "fab fa-instagram"></i></a>
+                    <a href="https://www.youtube.com/c/HarshitRautela/" target="_blank"><i class = "fab fa-youtube"></i></a>
+               </div>
+        </div>
+        
+    <script type="text/javascript">
+    var rangeslider = document.getElementById("sliderRange");
+    var rangeslider2 = document.getElementById("sliderRange2");
+    var output = document.getElementById("demo");
+    var output2 = document.getElementById("minutes");
+    var rater = document.getElementById("rater");
+    var charger = document.getElementById("charger");
+    output.innerHTML = rangeslider.value;
+    rangeslider.oninput = function()
+    {
+      output.innerHTML = this.value;
+      rater.innerHTML = this.value;
+      document.getElementById("modc").style.backgroundColor = 'rgb('+(255-this.value*1.5) +',' + (this.value*2 +55) + ','+(this.value*0.8 + 100)+')';
+    }
+    rangeslider2.oninput = function()
+    {
+      if(this.value < 2)
+        output2.innerHTML = this.value + " Minute";      
+      else
+      output2.innerHTML = this.value + " Minutes";
+      charger.innerHTML = 1050 + (30*this.value);
+    }
+        var counter = 1;
+        setInterval(function()
+        {
+          document.getElementById('radio' + counter).checked = true;
+          counter++;
+          if(counter > 4){
+            counter = 1;
+          }
+        },6000);
+          var modal = document.getElementById("myModal");
+          var hmodal = document.getElementById("hireModal");
+          var btn = document.getElementById("bth");
+          var btn2 = document.getElementById("hp");
+          var btn3 = document.getElementById("hirebtn");
+          var btn4 = document.getElementById("seeprofile");
+          var span = document.getElementsByClassName("close")[0];
+          var span2 = document.getElementsByClassName("close2")[0];
+          btn.onclick = function()
+          {
+            modal.style.display = "block";
+          }
+          btn2.onclick = function()
+          {
+            hmodal.style.display = "block";
+          }
+          btn3.onclick = function()
+          {
+            hmodal.style.display = "block";
+          }
+          btn4.onclick = function()
+          {
+            modal.style.display = "block";
+          }
+          span.onclick = function()
+          {
+            modal.style.display = "none";
+          }
+          span2.onclick = function()
+          {
+            hmodal.style.display = "none";
+          }
+          window.onclick = function(event)
+          {
+            if (event.target == modal) {
+              modal.style.display = "none";
+            }
+          }
+        </script>
+		<script>
+			var btn = $('#button');
+			$(window).scroll(function() {
+			if ($(window).scrollTop() > 300) {
+				btn.addClass('show');
+				} 			
+			else {
+				btn.removeClass('show');
+				}
+			});
+			$("#button").on("click", function() {
+				$(window).scrollTop(0);
+			});
+		</script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+     
+        </body>
+</html>

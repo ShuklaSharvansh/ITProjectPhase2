@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Animations</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="../../lstyle.css">
+        <script src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    </head>
+    <body>
+	<a id="button" style="text-decoration: none;"></a>
+        <div class="col-lg-12 col-md-12 col-sm-12 container justify-content-center">
+            <br>
+            <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: rgb(32, 78, 134);">
+                <div class="container-fluid">
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">  
+                    <span class="navbar-toggler-icon"></span>
+                  </button>  
+                  <div class="collapse navbar-collapse" id="navbarSupportedContent" style="padding: 0.5%;">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                      <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="../../index">Home</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="../infographics/infographics">Infographics</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link active" href="#">Animations</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="../bgm/bgm">BGM</a>
+                      </li>
+                      <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">More</a>
+                        <div class="dropdown-menu" style="background-color: rgb(94, 177, 255);opacity: 0.8;">
+                          <a class="dropdown-item" href="../processing/processing" style=" color:#000;text-decoration: none;">Photo Editing</a>
+                          <a class="dropdown-item" href="../../profiles/baseprofile" style=" color:#000;">All Profiles</a>
+                          <a class="dropdown-item" href="/account" style=" color:#000;">Account</a>
+                          <a class="dropdown-item" href="../../aboutus" style=" color:#000;">About Us</a>
+                        </div>
+                      </li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                      <li><a href="../../login" style="color:#bbb;text-decoration: none;">Login / Sign-Up</a></li>
+                    </ul>
+                  </div>
+                </div>  
+              </nav>
+        <div class="title">
+        <h1 style="font-size: 100px; font-weight: bolder; text-align: center;">ANIMATIONS & 3D</h1>
+        <hr style="border: none; width:50%">
+        <h3>Hire the artist of your choice for the best possible graphics work for your projects</h3>
+        </div>
+         {{#each row}}
+         <div class="cfx">
+             <br><br> <br>
+          </div>
+        <div class="row">
+            <div class="col-sm-8 col-lg-6 justify-content-center" style="margin: auto;">
+                <h1>{{this.name}}</h1>
+                <img src="../{{this.photo}}" style="border-radius: 4%;">
+            </div>     
+            <div class="col-sm-12 col-lg-6" style="background-color: rgba(22,22,44,0.5); border-radius: 3%;">
+              <div class="cfx"><br><br><br></div>
+              <h3 style="color: #ccc; text-align: left; margin: 2%;">{{this.expertof}}</h3>
+              <br>
+              <h3 style="color: #ccc; text-align: left; margin: 2%;">Experience : {{this.experience}}</h3>
+              <br>
+              <h3 style="color: #ccc; text-align: left; margin: 2%;">Details:</h3>
+              <br>
+              <h4 style="color: #ccc; text-align: left; margin: 2%;">{{this.details}}</h4>
+              <br>
+              <h3 style="color: rgb(238, 236, 150); text-align: left; margin: 2%;">Ratings: {{this.rating}}</h3>  
+              <div class="cfx">
+                <br><br>
+             </div>
+              <a href="../../profiles/profile{{this.id}}"><button type="button" id="seeprofile">See Profile</button></a>
+            </div>
+        </div>
+        <div class="cfx">
+            <br>
+        </div>
+        {{/each}}
+    <a href="../../index"><button type="button" id="bth">Back To Home</button></a>
+                <div class="cfx"> 
+                    <br>
+                </div>
+            <footer>
+                <div class="social">
+                    <a href="https://www.facebook.com/" target="_blank"><i class = "fab fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/harshit.s.r/" target="_blank"><i class = "fab fa-instagram"></i></a>
+                    <a href="https://www.youtube.com/c/HarshitRautela/" target="_blank"><i class = "fab fa-youtube"></i></a>
+               </div>
+        </div>
+		<script>
+			var btn = $('#button');
+			$(window).scroll(function() {
+			if ($(window).scrollTop() > 300) {
+				btn.addClass('show');
+				} 			
+			else {
+				btn.removeClass('show');
+				}
+			});
+			$("#button").on("click", function() {
+				$(window).scrollTop(0);
+			});
+		</script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+     
+        </body>
+</html>
